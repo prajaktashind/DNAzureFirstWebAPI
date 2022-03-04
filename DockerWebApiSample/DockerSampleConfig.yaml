@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: DockerWebApiSample
+      app: Dockersampleconfig
   template:
     metadata:
       labels:
-        app: DockerWebApiSample
+        app: Dockersampleconfig
     spec:
       containers:
       - name: dockersamplerepos
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dockerwebapisample
+  name: dockersampleconfig
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: DockerWebApiSample
+    app: Dockersampleconfig
